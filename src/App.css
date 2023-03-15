@@ -1,6 +1,6 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +35,131 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.home_spotlight__nsbuM {
+  background: radial-gradient(50% 50% at 50% 50%,#fff 0,hsla(0,0%,100%,0) 100%);
+  background: radial-gradient(50% 50% at 50% 50%,#fff 0,hsla(0,0%,100%,0) 100%);
+  opacity: .06;
+  transform: rotate(45deg);
+  width: 100%;
+  top: -80px;
+  max-width: 1800px;
+}
+.home_main__IL9KK:after, .home_spotlight__nsbuM {
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+}
+
+.home_main__IL9KK:after, .home_spotlight__nsbuM {
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+}
+.home_main__IL9KK:after {
+  content: "";
+  filter: url(#noiseFilter);
+  inset: 0;
+  opacity: 1;
+  mix-blend-mode: soft-light;
+  z-index: 2;
+}
+.geist-visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  top: -1000px;
+  left: -1000px;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  visibility: hidden;
+}
+svg {
+  shape-rendering: crispEdges;
+}
+
+.home_main__IL9KK {
+  background-size: contain;
+}
+.home_main__IL9KK {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://vercel.com/design/rings-bg.svg");
+  width: 100%;
+  height: 100vh;
+  max-height: 900px;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.main-title{
+  font-size: 7rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  margin: 0 0 40px;
+}
+
+.navigation-switcher_stroke__Qh9TK {
+  background: linear-gradient(90deg,transparent, #666 20%, #333 67.19%,transparent);
+  height: 1px;
+  position: absolute;
+  top: -1px;
+  width: 90%;
+  left: 32px;
+  z-index: -1;
+}
+.main-btn{
+  text-shadow: 1px 1px 12px hsla(0,0%,100%,.4);
+  border-radius: inherit;
+  height: 36px;
+  border: 0;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  color: #888;
+  position: relative;
+  cursor: pointer;
+  transition: color .15s ease;
+}
+
+.navigation-switcher_glow__P9ODY {
+  background: #fff;
+  width: 50%;
+  height: 50px;
+  border-radius: inherit;
+  position: absolute;
+  z-index: 1;
+  filter: blur(32px);
+  bottom: -52px;
+}
+.navigation-switcher_pill__x4onZ {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  background: hsla(0,0%,100%,.08);
+}
+
+
+
+.navigation-switcher_switcher__RbcWU {
+    overflow: hidden;
+    border-radius: inherit;
+    padding: 4px;
+    background: var(--accents-1);
 }
