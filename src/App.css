@@ -4,11 +4,12 @@
 html{
   font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   font-feature-settings: normal;
-  background-color: rgb(0, 2, 18);
+
 }
-main {
-  background-color: rgb(0, 2, 18);
+body{
+  background-color: #0a0118;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -119,7 +120,7 @@ svg {
 }
 
 .navigation-switcher_stroke__Qh9TK {
-  background: linear-gradient(90deg,transparent, #666 20%, #333 67.19%,transparent);
+  background: linear-gradient(90deg,transparent, #262626 20%, #333 67.19%,transparent);
   height: 1px;
   position: absolute;
   top: -1px;
@@ -499,4 +500,214 @@ https://developer-tools.framer.website/?via=onepagelove
   -webkit-box-pack: center;
   justify-content: center;
   background: radial-gradient(ellipse 80% 50% at 50% -20%,#2b56f530, rgba(255,255,255,0));
+}
+
+.footer {
+  background: radial-gradient(32.81% 53.93% at 50% 0%,rgb(133 102 255 / 7%) 0%,rgba(133,102,255,0) 100%,rgb(133 102 255 / 0%) 100%);
+}
+
+.technical {
+ 
+  position: relative;
+}
+
+.technical:before {
+  background: linear-gradient(270deg,rgba(61,53,78,0) 28.87%,#3d354e 45.39%,#3d354e 53.54%,rgba(61,53,78,0) 70.06%);
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.footer-nav-group {
+  flex: 1;
+  min-width: 150px;
+  padding-right: 16px;
+}
+.footer-nav-group-title {
+  color: #d2d0dd;
+  margin-bottom: 24px;
+}
+.footer-nav-group-title {
+  /* font-feature-settings: "cv06" on,"calt" off,"liga" off; */
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  line-height: 24px;
+}
+.footer-nav-group-item {
+  color: #9b96b0;
+  display: block;
+  margin-bottom: 16px;
+  transition: .3s ease color;
+}
+
+.technical {
+  padding-bottom: 170px;
+  padding-top: 132px;
+  position: relative;
+}
+
+.technical:before {
+  background: linear-gradient(270deg,rgba(61,53,78,0) 28.87%,#3d354e 45.39%,#3d354e 53.54%,rgba(61,53,78,0) 70.06%);
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.technical:after {
+  content: "";
+  height: 100%;
+  left: 50%;
+  max-width: 1680px;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%);
+  width: 100vw;
+  z-index: 9;
+  background: radial-gradient(40.23% 36.93% at 50% 0%,rgba(133,102,255,.04) 0%,rgba(133,102,255,0) 100%,rgba(133,102,255,0) 100%),radial-gradient(41.17% 54.58% at 50% 38.78%,rgba(133,102,255,.05) 0%,rgba(133,102,255,0) 100%);
+  z-index: 3;
+}
+
+.section-header-title{
+  font-family: Rebond Grotesque,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+}
+.section-header-title span {
+  background: linear-gradient(180deg,#fff 22.5%,rgba(255,255,255,.7) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.section-header-badge {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.04);
+  border-radius: 999px;
+  margin: 0 auto 12px;
+  padding: 4px 14px;
+  width: -moz-max-content;
+  width: max-content;
+  color:#fff;
+  margin-bottom: 20px;
+}
+.section-header-badge {
+  font-feature-settings: "ss14" on,"cv01" on,"cv02" on,"cv03" on,"cv04" on,"cv09" on,"cv10" on;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.technical-excel {
+  background: linear-gradient(129.44deg,rgba(169,163,194,.28) .84%,rgba(169,163,194,.056) 20.97%);
+  border-radius: 12px;
+  height: 410px;
+  width: 360px;
+}
+
+
+.technical-excel-inner {
+  background: #0a0118;
+  border-radius: inherit!important;
+}
+.magical-borders-content>*:before, .magical-borders-content>*:after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: opacity .5s;
+  width: 100%;
+}
+.technical-excel-text {
+  background: linear-gradient(180deg,#fff 0%,rgba(255,255,255,.7) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-feature-settings: "cv01" on,"cv02" on,"cv03" on,"cv09" on,"cv06" on,"cv04" on,"cv10" on,"calt" off,"liga" off;
+  font-size: 20px;
+  font-weight: 400;
+  left: 50%;
+  letter-spacing: -.02em;
+  line-height: 32px;
+  position: absolute;
+  text-align: center;
+  top: 98px;
+  transform: translate(-50%);
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 1;
+}
+
+.magical-borders-content>*:before {
+  --circle-size: 600px;
+  background: radial-gradient(var(--circle-size, 600px) circle at var(--mouse-x) var(--mouse-y),rgba(255,255,255,.06),transparent 40%);
+  z-index: 15;
+}
+
+.magical-borders-content>*:after {
+  --circle-size: 600px;
+  background: radial-gradient(var(--circle-size, 600px) circle at var(--mouse-x) var(--mouse-y),rgba(255,255,255,.4),transparent 40%);
+  z-index: 1;
+}
+
+.technical-excel-lights {
+  pointer-events: none;
+  z-index: 2;
+}
+.technical-excel-lights, .technical-excel-background {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.lazy-image {
+  display: block;
+  transition: 1s cubic-bezier(.6,.6,0,1) opacity;
+}
+
+.card-animation-opportunity {
+
+  -webkit-mask-image: linear-gradient(180deg,#0b0217 74.65%,rgba(11,2,23,0) 100%);
+  mask-image: linear-gradient(180deg,#0b0217 74.65%,rgba(11,2,23,0) 100%);
+  position: relative;
+}
+.card-animation>* {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.card-animation>*:before {
+  background: linear-gradient(180deg,#0a0118 0%,rgba(10,1,24,0) 24.22%,rgba(10,1,24,0) 73.85%,#0a0118 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 15;
+}
+.card-animation-opportunity-background {
+  height: 156px;
+  left: 16px;
+  -webkit-mask-image: linear-gradient(0deg,rgba(255,255,255,0) 0%,#fff 16.96%,#fff 84.66%,rgba(255,255,255,0) 100%);
+  mask-image: linear-gradient(0deg,rgba(255,255,255,0) 0%,#fff 16.96%,#fff 84.66%,rgba(255,255,255,0) 100%);
+  position: absolute;
+  top: 16px;
+  width: 364px;
 }
