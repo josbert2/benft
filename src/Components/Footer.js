@@ -10,39 +10,45 @@ function Footer() {
         "--mouse-x": "879px",
         "--mouse-y": "116.906px"
       };
+      const length = 10; // Longitud del array simulado
+      const simulatedArray = Array.from({ length }, (_, index) => index); // Simulación del array
+    
   return (
     <>
         <section class="technical">
             <div class="container mx-auto">
                 <div class="section-header-badge" >BeNFT</div>
                 <h2 class="section-header-title text-center">
-                    <div class="section-header-title-desktop">
+                    <div class="section-header-title-desktop pb-20">
                         <span >POWERED BY A TEAM</span>
                     </div>
                 </h2>
 
-                <div class="magical-borders-content grid grid-cols-4 gap-5">
-                    <div class="technical-excel pt-20">
-                        <div class="technical-excel-inner magical-borders-inner" style={styles}>
-                            <img src="https://wope.com/images/technical/technical-excel-lights.png" />
-                            <div class="absolute top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4">
-                                <div class="card-animation-opportunity rounded-full ">
-                                    <img class="w-30 mx-auto" style={{ width: "175px" }}  src="https://main.d21mzqunbsoo09.amplifyapp.com/images/Team/gg.png" />
-                                </div>
-                                <div class="pt-4">
-                                    <div class="footer-nav-group-item text-center font-bold text-base">
-                                        Carlos Melendez
+                <div class="magical-borders-content grid grid-cols-4 gap-20">
+                    {simulatedArray.map((item, index) => (
+                        <div class="technical-excel pt-20">
+                            <div class="technical-excel-inner magical-borders-inner" style={styles}>
+                                <img src="https://wope.com/images/technical/technical-excel-lights.png" class="h-full" />
+                                <div class="absolute top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4">
+                                    <div class="card-animation-opportunity rounded-full ">
+                                        <img class="w-30 mx-auto" style={{ width: "175px" }}  src="https://main.d21mzqunbsoo09.amplifyapp.com/images/Team/gg.png" />
                                     </div>
-                                    <div class="footer-nav-group-item text-center">
-                                        Legal and Compliance
+                                    <div class="pt-4">
+                                        <div class="footer-nav-group-item text-center font-bold text-base">
+                                            Carlos Melendez
+                                        </div>
+                                        <div class="footer-nav-group-item text-center">
+                                            Legal and Compliance
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="technical-excel-text">
+                                <div class="technical-excel-text">
 
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </div>    
+                    ))}
+                    
                 </div>
             </div>
 
