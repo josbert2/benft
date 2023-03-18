@@ -4,11 +4,42 @@ const Services = () => {
    const imageService = [
       {
          id: 1,
-         image: 'https://cdn-icons-png.flaticon.com/512/2152/2152502.png',
+         image: 'https://cdn-icons-png.flaticon.com/512/3051/3051141.png',
          title: 'CROSS-CHAIN PAYMENT SOLUTION',
          description: 'Pagos entre cadenas de bloques simplificados',
          subTitle: 'Nuestra solución de pagos Cross-Chain ofrece una forma sencilla',
       },
+      {
+         id: 2,
+         image: 'https://cdn-icons-png.flaticon.com/512/10103/10103356.png',
+         title: 'GMT Marketplace - Tu lugar de compras online',
+         description: 'la plataforma de compras en línea más completa y segura del mercado.',
+         subTitle: 'Compra fácil, compra seguro, compra en GMT Marketplace.',
+      },
+      {
+         id: 3,
+         image: 'https://cdn-icons-png.flaticon.com/512/2152/2152502.png',
+         title: 'DEFI PLATFORM',
+         description: 'Nuestra plataforma DeFi te permite acceder a oportunidades de inversión únicas en el mercado financiero',
+         subTitle: 'Únete a la revolución financiera descentralizada con nuestra plataforma DeFi y maximiza tu inversión.',
+
+      },
+      {
+         id: 4,
+         image: 'https://cdn-icons-png.flaticon.com/512/943/943072.png',
+         title: 'EMPLOYEE RECOGNITIONS',
+         description: 'Nuestra plataforma de reconocimiento de empleados te permite reconocer y premiar el esfuerzo',
+         subTitle: 'onvierte a tu equipo en tu mayor activo con nuestra plataforma de reconocimiento de empleados.',
+      },
+      {
+         id: 5,
+         image: 'https://cdn-icons-png.flaticon.com/512/2103/2103751.png',
+         title: 'CORPORATE OKR AUTOMATION',
+         description: 'Nuestra plataforma de automatización de objetivos corporativos (OKR)',
+         subTitle: ' Alinea los objetivos de tu empresa y maximiza la productividad de tu equipo.',
+      },
+
+
    ]
 
    const length = 10; // Longitud del array simulado
@@ -201,11 +232,11 @@ const Services = () => {
 
 
             <div class="md:grid md:grid-cols-4 gap-20 md:py-40 md:px-40 px-10">
-               {simulatedArray.map((item, index) => (
-                  <div className="css-1grylpu">
+               {imageService.map((item, index) => (
+                  <div className="css-1grylpu" key={item.id}>
                   <div class="absolute top-10 filter-css flex justify-center items-center">
                      <div class="h-20 w-20">
-                        <img class="h-full w-full" src="https://cdn-icons-png.flaticon.com/512/2152/2152502.png" alt="Ledger Nano X" />
+                        <img class="h-full w-full" src={item.image} alt="Ledger Nano X" />
                      </div>
                   </div>
                   <div className="css-rxy22j">
@@ -385,9 +416,9 @@ const Services = () => {
                         </div>
                      </div>
                      <div className="relative z-50 css-kg5ry4">
-                        <p className="chakra-text css-nr1hta">CROSS-CHAIN PAYMENT SOLUTION</p>
-                        <h3 className="chakra-text css-1th6kja">Pagos entre cadenas de bloques simplificados</h3>
-                        <p className="chakra-text css-xiqael">Nuestra solución de pagos Cross-Chain ofrece una forma sencilla</p>
+                        <p className="chakra-text css-nr1hta text-left">{item.title}</p>
+                        <h3 className="chakra-text css-1th6kja">{item.description}</h3>
+                        <p className="chakra-text css-xiqael">{item.subTitle}</p>
                      </div>
                   </div>
                   </div>

@@ -6,7 +6,7 @@ import './App.css';
 //  #46bdf4 
 import React from 'react';
 import Layout from './Components/Layouts';
-import Home from './Components/Home';
+
 import Home2 from './Components/Home2';
 
 import Partners from './Pages/Partners';
@@ -19,7 +19,6 @@ const simulatedArray = Array.from({ length }, (_, index) => index);
 function App() {
   return (
     <Layout>
-      {/*<Home /> */}
       <Home2 />
       <Services />
   

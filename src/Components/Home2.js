@@ -1,14 +1,17 @@
-import React from 'react';
+import {React, useState} from 'react';
 
 function Home2() {
    const styles = {
       "--animation-speed": "4s",
     };
+
+   
   return (
     <main>
       {/* <div class="pointer-events-none absolute inset-x-0 top-0 -z-10 hidden dark:block background-linear">
          <img src="https://xhibiter-nextjs.netlify.app/images/gradient_dark.jpg" alt="gradient dark" class="h-full w-full" />
       </div> */}
+     
        <div class="background-linear">
         
       </div>

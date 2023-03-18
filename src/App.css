@@ -2050,7 +2050,7 @@ https://idle.finance/?ref=landingfolio
   padding-bottom:  33px;
 }
 .css-nr1hta {
-  text-align: inherit;
+
   margin-top: var(--chakra-space-2);
 }
 .css-nr1hta {
@@ -2060,7 +2060,7 @@ https://idle.finance/?ref=landingfolio
   line-height: var(--chakra-lineHeights-short);
   letter-spacing: var(--chakra-letterSpacings-kicker);
   font-size: var(--chakra-fontSizes-2xs);
-  text-align: center;
+  
   display: inline-block;
   background: var(--chakra-colors-GradientMain);
   color: transparent;
@@ -2321,4 +2321,116 @@ https://idle.finance/?ref=landingfolio
   .jfPhrT {
     font-size: 44px;
   }
+}
+
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-mobile__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.menu-mobile__toggle-icon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  position: relative;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu-mobile__toggle-icon:before,
+.menu-mobile__toggle-icon:after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-mobile__toggle-icon:before {
+  top: -8px;
+}
+
+.menu-mobile__toggle-icon:after {
+  top: 8px;
+}
+
+.menu-mobile__toggle-icon.open {
+  transform: rotate(45deg);
+}
+
+.menu-mobile__toggle-icon.open:before {
+  transform: rotate(90deg) translate(7px, -7px);
+}
+
+.menu-mobile__toggle-icon.open:after {
+  transform: rotate(-90deg) translate(7px, 7px);
+}
+
+.menu-mobile__list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  width: 70%;
+  height: 100vh;
+  transform: translateX(-100%);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-100%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+}
+.menu-mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Mostrar el overlay cuando el menú está abierto */
+.menu-mobile-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.menu-mobile__list.open {
+  transform: translateX(0);
+}
+
+.menu-mobile__item{
+  list-style: none;
+  padding: 16px 24px;
+
+  text-align: center;
+}
+.menu-mobile__item{
+  color: #d9d9d9;
+    font-weight: 700;
 }
