@@ -87,16 +87,19 @@ function Header() {
     
         <ul className={`menu-mobile__list ${isOpen ? 'open' : ''}`}>
           <li className="menu-mobile__item chakra-text css-xiqael">
-            <a href="#">Inicio</a>
+            <a href="#">What is $BENFT</a>
           </li>
           <li className="menu-mobile__item chakra-text css-xiqael">
-            <a href="#">Nosotros</a>
+            <a href="#">Roadmap</a>
           </li>
           <li className="menu-mobile__item chakra-text css-xiqael">
-            <a href="#">Servicios</a>
+            <a href="#">Team</a>
           </li>
           <li className="menu-mobile__item chakra-text css-xiqael">
-            <a href="#">Contacto</a>
+            <a href="#">artners</a>
+          </li>
+          <li className="menu-mobile__item chakra-text css-xiqael">
+            <a href="#">FAQ</a>
           </li>
         </ul>
       </nav>

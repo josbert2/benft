@@ -117,6 +117,24 @@ function Team() {
     return (
         <>
           <section class="relative">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
             <div className="security-background">
               <div className="bg-circles-team">
                 <picture>
