@@ -1,6 +1,8 @@
 import React from 'react';
 import Partners from '../Pages/Partners';
 import Team from '../Pages/Team';
+import Services from '../Pages/Services';
+
 
 function Home() {
   const styles = {
@@ -8,15 +10,15 @@ function Home() {
   };
   return (
     <main class="">
-        <div class="bg-ellipse2">
-                <img class="lazy lazyLoaded" data-load-priority="5" alt="" src="https://idle.finance/assets/img/Ellipse2.6ad222.png" />
-            </div>
+        <div class="bg-ellipse1">
+            <img data-src="https://idle.finance/assets/img/Ellipse1.ee547e.png" class="lazy lazyLoaded" data-load-priority="5" alt="" src="https://idle.finance/assets/img/Ellipse1.ee547e.png" />
+        </div>
     
-        <div className="h-screen overflow-hidden  App">
+        <div className="overflow-hidden App svg-react-none">
           <div class="home_main__IL9KK">
               <div aria-hidden="true" class="home_spotlight__nsbuM"></div>
-              <svg aria-hidden="true" class="geist-visually-hidden">
-                <filter id="noiseFilter"><feTurbulence baseFrequency="6.29" numOctaves="6" stitchTiles="stitch" type="fractalNoise"></feTurbulence></filter></svg>
+              {/*<svg aria-hidden="true" class="geist-visually-hidden">
+              <filter id="noiseFilter"><feTurbulence baseFrequency="6.29" numOctaves="6" stitchTiles="stitch" type="fractalNoise"></feTurbulence></filter></svg> */}
           </div>
           <div class="absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4">
               <h1 class="sc-74479697-0 sc-4f2b0b9c-9 fGLicR irLeoN lea leading-8" style={{ lineHeight: "69px;" }}>"Protect your cryptocurrencies <br />  with <span class="text-gradient">BENFT</span></h1>
@@ -58,9 +60,20 @@ function Home() {
                   </div>
                 </button>
               </div>        
-            </div>
+          </div>
+          
+        
         </div>
-        <div class="sc-b86529e4-16 eTmfaz h-screen">
+        <div class="service-setcion">
+                        
+        </div>
+        <section class="h-screen ">
+          
+        <Services />
+        </section>
+       
+      
+          <div class="sc-b86529e4-16 eTmfaz h-screen">
             <div class="container mx-auto">
               <div class="my-20">
                 <div class="section-header-badge">BeNFT</div>
@@ -91,22 +104,23 @@ function Home() {
                 </div>
               </div>
             </div>
-        </div>
-        <Partners />
-        <Team />
-        <div class="">
-            <div className="sc-b86529e4-14 sc-295691ec-0 hKXWgx ccDqTO">
-                <div className="sc-590812e5-0 geonHp">
-                <h2 className="sc-74479697-0 sc-295691ec-2 jfPhrT kPOmuH">
-                    Unlike any tool<br />
-                    you’ve used before
-                </h2>
-                <p className="sc-74479697-0 sc-b86529e4-4 sc-295691ec-3 dnoTOq jdXJac byhRHm">Designed to the last pixel and engineered with unforgiving precision, Linear combines UI elegance with world-class performance.</p>
-                </div>
-                
-            </div>
-      </div> 
-     
+          </div>
+          <Partners />
+          <Team />
+          <div class="">
+              <div className="sc-b86529e4-14 sc-295691ec-0 hKXWgx ccDqTO">
+                  <div className="sc-590812e5-0 geonHp">
+                  <h2 className="sc-74479697-0 sc-295691ec-2 jfPhrT kPOmuH">
+                      Unlike any tool<br />
+                      you’ve used before
+                  </h2>
+                  <p className="sc-74479697-0 sc-b86529e4-4 sc-295691ec-3 dnoTOq jdXJac byhRHm">Designed to the last pixel and engineered with unforgiving precision, Linear combines UI elegance with world-class performance.</p>
+                  </div>
+                  
+              </div>
+          </div>
+
+        
       
     </main>
   );

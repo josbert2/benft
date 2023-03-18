@@ -7,11 +7,24 @@ import './App.css';
 import React from 'react';
 import Layout from './Components/Layouts';
 import Home from './Components/Home';
+import Home2 from './Components/Home2';
+
+import Partners from './Pages/Partners';
+import Team from './Pages/Team';
+import Services from './Pages/Services';
+
+const length = 10; // Longitud del array simulado
+const simulatedArray = Array.from({ length }, (_, index) => index);
 
 function App() {
   return (
     <Layout>
-      <Home />
+      {/*<Home /> */}
+      <Home2 />
+      <Services />
+  
+      <Team />
+      <Partners />
     </Layout>
   );
 }

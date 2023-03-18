@@ -1,14 +1,544 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.22;
+  margin: 0px 0px 0.5em;
+  color: rgb(247, 248, 248);
+}
+:root {
+  --header-height: 48px;
+  --page-padding-default: 32px;
+  --page-max-width: 1200px;
+  --page-padding-left: max(env(safe-area-inset-left),var(--page-padding-default));
+  --page-padding-right: max(env(safe-area-inset-right),var(--page-padding-default));
+  --page-padding-y: 120px;
+  --layer-skip-nav: 5000;
+  --layer-tooltip: 1100;
+  --layer-toasts: 800;
+  --layer-dialog: 700;
+  --layer-dialog-overlay: 699;
+  --layer-command-menu: 650;
+  --layer-popover: 600;
+  --layer-context-menu: 600;
+  --layer-overlay: 500;
+  --layer-header: 100;
+  --layer-footer: 100;
+  --font-monospace: "SFMono Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+  --font-regular: "Linear","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu, Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  --font-emoji: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Segoe UI","Twemoji Mozilla", "Noto Color Emoji","Android Emoji";
+  --speed-highlightFadeIn: 0s;
+  --speed-highlightFadeOut: 0.15s;
+  --speed-quickTransition: 0.1s;
+  --speed-regularTransition: 0.25s;
+  --rounded-full: 9999px;
+  --transparent: rgba(255,255,255,0);
+  --chakra-ring-inset: var(--chakra-empty,/*!*/ /*!*/);
+    --chakra-ring-offset-width: 0px;
+    --chakra-ring-offset-color: #fff;
+    --chakra-ring-color: rgba(66, 153, 225, 0.6);
+    --chakra-ring-offset-shadow: 0 0 #0000;
+    --chakra-ring-shadow: 0 0 #0000;
+    --chakra-space-x-reverse: 0;
+    --chakra-space-y-reverse: 0;
+    --chakra-colors-transparent: transparent;
+    --chakra-colors-current: currentColor;
+    --chakra-colors-black: #000000;
+    --chakra-colors-white: #FFFFFF;
+    --chakra-colors-whiteAlpha-50: rgba(227, 229, 232, 0.04);
+    --chakra-colors-whiteAlpha-100: rgba(227, 229, 232, 0.06);
+    --chakra-colors-whiteAlpha-200: rgba(227, 229, 232, 0.08);
+    --chakra-colors-whiteAlpha-300: rgba(227, 229, 232, 0.16);
+    --chakra-colors-whiteAlpha-400: rgba(227, 229, 232, 0.24);
+    --chakra-colors-whiteAlpha-500: rgba(227, 229, 232, 0.36);
+    --chakra-colors-whiteAlpha-600: rgba(227, 229, 232, 0.48);
+    --chakra-colors-whiteAlpha-700: rgba(227, 229, 232, 0.52);
+    --chakra-colors-whiteAlpha-800: rgba(227, 229, 232, 0.72);
+    --chakra-colors-whiteAlpha-900: rgba(227, 229, 232, 0.92);
+    --chakra-colors-blackAlpha-50: rgba(21, 24, 30, 0.04);
+    --chakra-colors-blackAlpha-100: rgba(21, 24, 30, 0.06);
+    --chakra-colors-blackAlpha-200: rgba(21, 24, 30, 0.08);
+    --chakra-colors-blackAlpha-300: rgba(21, 24, 30, 0.16);
+    --chakra-colors-blackAlpha-400: rgba(21, 24, 30, 0.24);
+    --chakra-colors-blackAlpha-500: rgba(21, 24, 30, 0.36);
+    --chakra-colors-blackAlpha-600: rgba(21, 24, 30, 0.48);
+    --chakra-colors-blackAlpha-700: rgba(21, 24, 30, 0.64);
+    --chakra-colors-blackAlpha-800: rgba(21, 24, 30, 0.84);
+    --chakra-colors-blackAlpha-900: rgba(21, 24, 30, 0.96);
+    --chakra-colors-gray-50: #F7FAFC;
+    --chakra-colors-gray-100: #EDF2F7;
+    --chakra-colors-gray-200: #E2E8F0;
+    --chakra-colors-gray-300: #CBD5E0;
+    --chakra-colors-gray-400: #A0AEC0;
+    --chakra-colors-gray-500: #718096;
+    --chakra-colors-gray-600: #4A5568;
+    --chakra-colors-gray-700: #2D3748;
+    --chakra-colors-gray-800: #1A202C;
+    --chakra-colors-gray-900: #171923;
+    --chakra-colors-red-50: #FFF5F5;
+    --chakra-colors-red-100: #FED7D7;
+    --chakra-colors-red-200: #FEB2B2;
+    --chakra-colors-red-300: #FC8181;
+    --chakra-colors-red-400: #F56565;
+    --chakra-colors-red-500: #E53E3E;
+    --chakra-colors-red-600: #C53030;
+    --chakra-colors-red-700: #9B2C2C;
+    --chakra-colors-red-800: #822727;
+    --chakra-colors-red-900: #63171B;
+    --chakra-colors-orange-50: #FFFAF0;
+    --chakra-colors-orange-100: #FEEBC8;
+    --chakra-colors-orange-200: #FBD38D;
+    --chakra-colors-orange-300: #F6AD55;
+    --chakra-colors-orange-400: #ED8936;
+    --chakra-colors-orange-500: #DD6B20;
+    --chakra-colors-orange-600: #C05621;
+    --chakra-colors-orange-700: #9C4221;
+    --chakra-colors-orange-800: #7B341E;
+    --chakra-colors-orange-900: #652B19;
+    --chakra-colors-yellow-50: #FFFFF0;
+    --chakra-colors-yellow-100: #FEFCBF;
+    --chakra-colors-yellow-200: #FAF089;
+    --chakra-colors-yellow-300: #F6E05E;
+    --chakra-colors-yellow-400: #ECC94B;
+    --chakra-colors-yellow-500: #D69E2E;
+    --chakra-colors-yellow-600: #B7791F;
+    --chakra-colors-yellow-700: #975A16;
+    --chakra-colors-yellow-800: #744210;
+    --chakra-colors-yellow-900: #5F370E;
+    --chakra-colors-green-50: #F0FFF4;
+    --chakra-colors-green-100: #C6F6D5;
+    --chakra-colors-green-200: #9AE6B4;
+    --chakra-colors-green-300: #68D391;
+    --chakra-colors-green-400: #48BB78;
+    --chakra-colors-green-500: #38A169;
+    --chakra-colors-green-600: #2F855A;
+    --chakra-colors-green-700: #276749;
+    --chakra-colors-green-800: #22543D;
+    --chakra-colors-green-900: #1C4532;
+    --chakra-colors-teal-50: #E6FFFA;
+    --chakra-colors-teal-100: #B2F5EA;
+    --chakra-colors-teal-200: #81E6D9;
+    --chakra-colors-teal-300: #4FD1C5;
+    --chakra-colors-teal-400: #38B2AC;
+    --chakra-colors-teal-500: #319795;
+    --chakra-colors-teal-600: #2C7A7B;
+    --chakra-colors-teal-700: #285E61;
+    --chakra-colors-teal-800: #234E52;
+    --chakra-colors-teal-900: #1D4044;
+    --chakra-colors-blue-50: #ebf8ff;
+    --chakra-colors-blue-100: #bee3f8;
+    --chakra-colors-blue-200: #90cdf4;
+    --chakra-colors-blue-300: #63b3ed;
+    --chakra-colors-blue-400: #4299e1;
+    --chakra-colors-blue-500: #3182ce;
+    --chakra-colors-blue-600: #2b6cb0;
+    --chakra-colors-blue-700: #2c5282;
+    --chakra-colors-blue-800: #2a4365;
+    --chakra-colors-blue-900: #1A365D;
+    --chakra-colors-cyan-50: #EDFDFD;
+    --chakra-colors-cyan-100: #C4F1F9;
+    --chakra-colors-cyan-200: #9DECF9;
+    --chakra-colors-cyan-300: #76E4F7;
+    --chakra-colors-cyan-400: #0BC5EA;
+    --chakra-colors-cyan-500: #00B5D8;
+    --chakra-colors-cyan-600: #00A3C4;
+    --chakra-colors-cyan-700: #0987A0;
+    --chakra-colors-cyan-800: #086F83;
+    --chakra-colors-cyan-900: #065666;
+    --chakra-colors-purple-50: #FAF5FF;
+    --chakra-colors-purple-100: #E9D8FD;
+    --chakra-colors-purple-200: #D6BCFA;
+    --chakra-colors-purple-300: #B794F4;
+    --chakra-colors-purple-400: #9F7AEA;
+    --chakra-colors-purple-500: #805AD5;
+    --chakra-colors-purple-600: #6B46C1;
+    --chakra-colors-purple-700: #553C9A;
+    --chakra-colors-purple-800: #44337A;
+    --chakra-colors-purple-900: #322659;
+    --chakra-colors-pink-50: #FFF5F7;
+    --chakra-colors-pink-100: #FED7E2;
+    --chakra-colors-pink-200: #FBB6CE;
+    --chakra-colors-pink-300: #F687B3;
+    --chakra-colors-pink-400: #ED64A6;
+    --chakra-colors-pink-500: #D53F8C;
+    --chakra-colors-pink-600: #B83280;
+    --chakra-colors-pink-700: #97266D;
+    --chakra-colors-pink-800: #702459;
+    --chakra-colors-pink-900: #521B41;
+    --chakra-colors-linkedin-50: #E8F4F9;
+    --chakra-colors-linkedin-100: #CFEDFB;
+    --chakra-colors-linkedin-200: #9BDAF3;
+    --chakra-colors-linkedin-300: #68C7EC;
+    --chakra-colors-linkedin-400: #34B3E4;
+    --chakra-colors-linkedin-500: #00A0DC;
+    --chakra-colors-linkedin-600: #008CC9;
+    --chakra-colors-linkedin-700: #0077B5;
+    --chakra-colors-linkedin-800: #005E93;
+    --chakra-colors-linkedin-900: #004471;
+    --chakra-colors-facebook-50: #E8F4F9;
+    --chakra-colors-facebook-100: #D9DEE9;
+    --chakra-colors-facebook-200: #B7C2DA;
+    --chakra-colors-facebook-300: #6482C0;
+    --chakra-colors-facebook-400: #4267B2;
+    --chakra-colors-facebook-500: #385898;
+    --chakra-colors-facebook-600: #314E89;
+    --chakra-colors-facebook-700: #29487D;
+    --chakra-colors-facebook-800: #223B67;
+    --chakra-colors-facebook-900: #1E355B;
+    --chakra-colors-messenger-50: #D0E6FF;
+    --chakra-colors-messenger-100: #B9DAFF;
+    --chakra-colors-messenger-200: #A2CDFF;
+    --chakra-colors-messenger-300: #7AB8FF;
+    --chakra-colors-messenger-400: #2E90FF;
+    --chakra-colors-messenger-500: #0078FF;
+    --chakra-colors-messenger-600: #0063D1;
+    --chakra-colors-messenger-700: #0052AC;
+    --chakra-colors-messenger-800: #003C7E;
+    --chakra-colors-messenger-900: #002C5C;
+    --chakra-colors-whatsapp-50: #dffeec;
+    --chakra-colors-whatsapp-100: #b9f5d0;
+    --chakra-colors-whatsapp-200: #90edb3;
+    --chakra-colors-whatsapp-300: #65e495;
+    --chakra-colors-whatsapp-400: #3cdd78;
+    --chakra-colors-whatsapp-500: #22c35e;
+    --chakra-colors-whatsapp-600: #179848;
+    --chakra-colors-whatsapp-700: #0c6c33;
+    --chakra-colors-whatsapp-800: #01421c;
+    --chakra-colors-whatsapp-900: #001803;
+    --chakra-colors-twitter-50: #E5F4FD;
+    --chakra-colors-twitter-100: #C8E9FB;
+    --chakra-colors-twitter-200: #A8DCFA;
+    --chakra-colors-twitter-300: #83CDF7;
+    --chakra-colors-twitter-400: #57BBF5;
+    --chakra-colors-twitter-500: #1DA1F2;
+    --chakra-colors-twitter-600: #1A94DA;
+    --chakra-colors-twitter-700: #1681BF;
+    --chakra-colors-twitter-800: #136B9E;
+    --chakra-colors-twitter-900: #0D4D71;
+    --chakra-colors-telegram-50: #E3F2F9;
+    --chakra-colors-telegram-100: #C5E4F3;
+    --chakra-colors-telegram-200: #A2D4EC;
+    --chakra-colors-telegram-300: #7AC1E4;
+    --chakra-colors-telegram-400: #47A9DA;
+    --chakra-colors-telegram-500: #0088CC;
+    --chakra-colors-telegram-600: #007AB8;
+    --chakra-colors-telegram-700: #006BA1;
+    --chakra-colors-telegram-800: #005885;
+    --chakra-colors-telegram-900: #003F5E;
+    --chakra-colors-dark: #0D0E12;
+    --chakra-colors-offBlack: #0f0f0f;
+    --chakra-colors-lightBlack: #1c1d21;
+    --chakra-colors-darkGray: #181818;
+    --chakra-colors-blueGray: #2d2e31;
+    --chakra-colors-subtitle: #8a8f98;
+    --chakra-colors-link: #0a8de5;
+    --chakra-colors-badge: #868F98;
+    --chakra-colors-GradientMain: linear-gradient(90deg, #6557FF 0%, #AA3FFF 29.43%, #AA3FFF 68.23%, #F8522E 100%);
+    --chakra-colors-BrandIndigoGradient: linear-gradient(261.83deg, rgba(25, 28, 34, 0.8) -115.2%, rgba(91, 33, 255, 0.8) -8.32%, rgba(47, 95, 247, 0.8) 105.47%);
+    --chakra-colors-BrandCeriseGradient: linear-gradient(88.32deg, rgba(229, 65, 144, 0.9) 33.07%, rgba(248, 82, 46, 0.9) 328.85%);
+    --chakra-colors-BrandFlameGradient: linear-gradient(257.92deg, #5B21FF -282.43%, #F8522E 101.94%);
+    --chakra-colors-YieldGradient: linear-gradient(165deg, #5B21FF 46.58%, #8A61FF 126.36%);
+    --chakra-colors-LightBlueGradient: linear-gradient(167.27deg, #5B21FF 8.55%, #5276EC 8.56%, #5A4BFF 117.4%);
+    --chakra-colors-BrandIndigo: #3C5DC7;
+    --chakra-colors-BrandElectric: #5B21FF;
+    --chakra-colors-BrandOrchid: #AA3FFF;
+    --chakra-colors-BrandCerise: #E54190;
+    --chakra-colors-BrandFlame: #E54190;
+    --chakra-colors-StaticContentInverseStrong: #15181E;
+    --chakra-colors-StaticContentInverseDefault: #15181ef5;
+    --chakra-colors-StaticContentInverseModerate: #15181ed6;
+    --chakra-colors-StaticContentInverseWeak: #15181ea3;
+    --chakra-colors-StaticContentStrong: #ffffff;
+    --chakra-colors-StaticContentDefault: #d2d4d7;
+    --chakra-colors-StaticContentModerate: #e3e5e8b8;
+    --chakra-colors-StaticContentWeak: #e3e5e885;
+    --chakra-colors-StaticDividerWeak: #2B303B;
+    --chakra-colors-StaticDividerDefault: #3F4550;
+    --chakra-colors-StaticDividerMid: #464c57;
+    --chakra-colors-StaticDividerStrong: #535965;
+    --chakra-colors-StaticDividerInverseWeak: #D3D5D9;
+    --chakra-colors-StaticDividerInverseDefault: #BDC0C7;
+    --chakra-colors-StaticDividerInverseStrong: #A7ABB4;
+    --chakra-colors-StaticContentSentimentBad: #E08787;
+    --chakra-colors-StaticContentSentimentGood: #7BCC7E;
+    --chakra-colors-StaticSurfaceNested: #111318;
+    --chakra-colors-StaticSurfaceDefault: #15181E;
+    --chakra-colors-StaticSurfaceRaised: #1A1D23;
+    --chakra-colors-StaticSurfaceElevated: #22262F;
+    --chakra-colors-StaticSurfaceInverseNested: #EEEFF1;
+    --chakra-colors-StaticSurfaceInverseDefault: #FFFFFF;
+    --chakra-colors-StaticSurfaceInverseRaised: #E3E5E8;
+    --chakra-colors-StaticSurfaceInverseElevated: #D3D5D9;
+    --chakra-colors-StaticSurfaceInverseSentimentBad: #E59C9C;
+    --chakra-borders-none: 0;
+    --chakra-borders-1px: 1px solid;
+    --chakra-borders-2px: 2px solid;
+    --chakra-borders-4px: 4px solid;
+    --chakra-borders-8px: 8px solid;
+    --chakra-fonts-heading: "Suisse Intl",sans-serif;
+    --chakra-fonts-body: var(--inter-font);
+    --chakra-fonts-mono: "Suisse Intl Mono",monospace;
+    --chakra-fontSizes-18: 1.2rem;
+    --chakra-fontSizes-22: 1.375rem;
+    --chakra-fontSizes-28: 1.75rem;
+    --chakra-fontSizes-44: 2.933rem;
+    --chakra-fontSizes-46: 3.06rem;
+    --chakra-fontSizes-48: 3.2rem;
+    --chakra-fontSizes-3xs: 0.45rem;
+    --chakra-fontSizes-2xs: 0.625rem;
+    --chakra-fontSizes-xs: 0.75rem;
+    --chakra-fontSizes-sm: 0.8125rem;
+    --chakra-fontSizes-md: 0.9375rem;
+    --chakra-fontSizes-lg: 1.06rem;
+    --chakra-fontSizes-xl: 1.25rem;
+    --chakra-fontSizes-2xl: 1.5rem;
+    --chakra-fontSizes-3xl: 2.13rem;
+    --chakra-fontSizes-4xl: 2.25rem;
+    --chakra-fontSizes-5xl: 3.25rem;
+    --chakra-fontSizes-6xl: 4rem;
+    --chakra-fontSizes-7xl: 4.8rem;
+    --chakra-fontSizes-8xl: 6.4rem;
+    --chakra-fontSizes-9xl: 8.53rem;
+    --chakra-fontSizes-fine: 0.733rem;
+    --chakra-fontWeights-hairline: 100;
+    --chakra-fontWeights-thin: 200;
+    --chakra-fontWeights-light: 300;
+    --chakra-fontWeights-normal: 400;
+    --chakra-fontWeights-medium: 500;
+    --chakra-fontWeights-semibold: 600;
+    --chakra-fontWeights-bold: 700;
+    --chakra-fontWeights-extrabold: 800;
+    --chakra-fontWeights-black: 900;
+    --chakra-fontWeights-regular: 400;
+    --chakra-letterSpacings-tighter: -0.00666em;
+    --chakra-letterSpacings-tight: -0.01333em;
+    --chakra-letterSpacings-normal: 0;
+    --chakra-letterSpacings-wide: 0.0266em;
+    --chakra-letterSpacings-wider: 0.05em;
+    --chakra-letterSpacings-widest: 0.1em;
+    --chakra-letterSpacings-tightest: -0.0625em;
+    --chakra-letterSpacings-space: 0.00666;
+    --chakra-letterSpacings-spaced: 0.01333em;
+    --chakra-letterSpacings-spacedTitle: 0.02em;
+    --chakra-letterSpacings-widerspace: 0.0875em;
+    --chakra-letterSpacings-kicker: 0.09333em;
+    --chakra-letterSpacings-accent: 0.12rem;
+    --chakra-lineHeights-3: .75rem;
+    --chakra-lineHeights-4: 1rem;
+    --chakra-lineHeights-5: 1.2625rem;
+    --chakra-lineHeights-6: 1.5rem;
+    --chakra-lineHeights-7: 1.75rem;
+    --chakra-lineHeights-8: 2rem;
+    --chakra-lineHeights-9: 2.25rem;
+    --chakra-lineHeights-10: 2.5rem;
+    --chakra-lineHeights-11: 2.675rem;
+    --chakra-lineHeights-12: 3.75rem;
+    --chakra-lineHeights-normal: normal;
+    --chakra-lineHeights-none: 1;
+    --chakra-lineHeights-shorter: 1.28;
+    --chakra-lineHeights-short: 1.4;
+    --chakra-lineHeights-base: 1.5;
+    --chakra-lineHeights-tall: 1.6;
+    --chakra-lineHeights-taller: 2;
+    --chakra-lineHeights-natural: 1.2;
+    --chakra-lineHeights-title: 1.25;
+    --chakra-lineHeights-button: 1.333;
+    --chakra-lineHeights-medium: 1.45;
+    --chakra-lineHeights-long: 1.7;
+    --chakra-lineHeights-longer: 1.8;
+    --chakra-lineHeights-giant: 2.1875rem;
+    --chakra-lineHeights-huge: 3rem;
+    --chakra-lineHeights-sectionTitle: 3.3rem;
+    --chakra-lineHeights-gradient: 3.4rem;
+    --chakra-radii-none: 0;
+    --chakra-radii-sm: 0.125rem;
+    --chakra-radii-base: 0.25rem;
+    --chakra-radii-md: 0.375rem;
+    --chakra-radii-lg: 0.5rem;
+    --chakra-radii-xl: 0.8rem;
+    --chakra-radii-2xl: 1rem;
+    --chakra-radii-3xl: 1.5rem;
+    --chakra-radii-full: 9999px;
+    --chakra-radii-4xl: 2.0125rem;
+    --chakra-space-1: 0.333rem;
+    --chakra-space-2: 0.5rem;
+    --chakra-space-3: 0.75rem;
+    --chakra-space-4: 1rem;
+    --chakra-space-5: 1.333rem;
+    --chakra-space-6: 1.5rem;
+    --chakra-space-7: 1.875rem;
+    --chakra-space-8: 2rem;
+    --chakra-space-9: 2.25rem;
+    --chakra-space-10: 2.5rem;
+    --chakra-space-12: 3rem;
+    --chakra-space-13: 3.25rem;
+    --chakra-space-14: 3.5rem;
+    --chakra-space-15: 4.3125rem;
+    --chakra-space-16: 4rem;
+    --chakra-space-18: 4.875rem;
+    --chakra-space-20: 5rem;
+    --chakra-space-22: 5.625rem;
+    --chakra-space-24: 6rem;
+    --chakra-space-26: 6.75rem;
+    --chakra-space-28: 7rem;
+    --chakra-space-32: 8rem;
+    --chakra-space-34: 8.625rem;
+    --chakra-space-36: 9rem;
+    --chakra-space-37: 9.0625rem;
+    --chakra-space-38: 9.25rem;
+    --chakra-space-40: 10rem;
+    --chakra-space-42: 10.25rem;
+    --chakra-space-44: 11rem;
+    --chakra-space-46: 11.625rem;
+    --chakra-space-48: 12rem;
+    --chakra-space-52: 13rem;
+    --chakra-space-56: 14rem;
+    --chakra-space-60: 15rem;
+    --chakra-space-64: 16rem;
+    --chakra-space-72: 18rem;
+    --chakra-space-80: 20rem;
+    --chakra-space-96: 24rem;
+    --chakra-space-px: 1px;
+    --chakra-space-0-5: 0.125rem;
+    --chakra-space-1-5: .4rem;
+    --chakra-space-2-5: 0.666rem;
+    --chakra-space-3-5: 0.9333rem;
+    --chakra-space-0-3: 0.3rem;
+    --chakra-space-4-5: 1.0666rem;
+    --chakra-space-4-75: 1.25rem;
+    --chakra-shadows-xs: 0 0 0 1px rgba(0, 0, 0, 0.05);
+    --chakra-shadows-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --chakra-shadows-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --chakra-shadows-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --chakra-shadows-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --chakra-shadows-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --chakra-shadows-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --chakra-shadows-outline: 0 0 0 3px rgba(66, 153, 225, 0.6);
+    --chakra-shadows-inner: inset 0 2px 4px 0 rgba(0,0,0,0.06);
+    --chakra-shadows-none: none;
+    --chakra-shadows-dark-lg: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;
+    --chakra-sizes-1: 0.333rem;
+    --chakra-sizes-2: 0.5rem;
+    --chakra-sizes-3: 0.75rem;
+    --chakra-sizes-4: 1rem;
+    --chakra-sizes-5: 1.333rem;
+    --chakra-sizes-6: 1.5rem;
+    --chakra-sizes-7: 1.875rem;
+    --chakra-sizes-8: 2rem;
+    --chakra-sizes-9: 2.25rem;
+    --chakra-sizes-10: 2.5rem;
+    --chakra-sizes-12: 3rem;
+    --chakra-sizes-13: 3.25rem;
+    --chakra-sizes-14: 3.5rem;
+    --chakra-sizes-15: 4.3125rem;
+    --chakra-sizes-16: 4rem;
+    --chakra-sizes-18: 4.875rem;
+    --chakra-sizes-20: 5rem;
+    --chakra-sizes-22: 5.625rem;
+    --chakra-sizes-24: 6rem;
+    --chakra-sizes-26: 6.75rem;
+    --chakra-sizes-28: 7rem;
+    --chakra-sizes-32: 8rem;
+    --chakra-sizes-34: 8.625rem;
+    --chakra-sizes-36: 9rem;
+    --chakra-sizes-37: 9.0625rem;
+    --chakra-sizes-38: 9.25rem;
+    --chakra-sizes-40: 10rem;
+    --chakra-sizes-42: 10.25rem;
+    --chakra-sizes-44: 11rem;
+    --chakra-sizes-46: 11.625rem;
+    --chakra-sizes-48: 12rem;
+    --chakra-sizes-52: 13rem;
+    --chakra-sizes-56: 14rem;
+    --chakra-sizes-60: 15rem;
+    --chakra-sizes-64: 16rem;
+    --chakra-sizes-72: 18rem;
+    --chakra-sizes-80: 20rem;
+    --chakra-sizes-96: 24rem;
+    --chakra-sizes-px: 1px;
+    --chakra-sizes-0-5: 0.125rem;
+    --chakra-sizes-1-5: .4rem;
+    --chakra-sizes-2-5: 0.666rem;
+    --chakra-sizes-3-5: 0.9333rem;
+    --chakra-sizes-max: max-content;
+    --chakra-sizes-min: min-content;
+    --chakra-sizes-full: 100%;
+    --chakra-sizes-3xs: 14rem;
+    --chakra-sizes-2xs: 16rem;
+    --chakra-sizes-xs: 20rem;
+    --chakra-sizes-sm: 24rem;
+    --chakra-sizes-md: 28rem;
+    --chakra-sizes-lg: 32rem;
+    --chakra-sizes-xl: 36rem;
+    --chakra-sizes-2xl: 40rem;
+    --chakra-sizes-3xl: 48rem;
+    --chakra-sizes-4xl: 54.875rem;
+    --chakra-sizes-5xl: 59.75rem;
+    --chakra-sizes-6xl: 62.875rem;
+    --chakra-sizes-7xl: 71rem;
+    --chakra-sizes-8xl: 79rem;
+    --chakra-sizes-prose: 60ch;
+    --chakra-sizes-container-sm: 40rem;
+    --chakra-sizes-container-md: 48rem;
+    --chakra-sizes-container-lg: 71rem;
+    --chakra-sizes-container-xl: 79rem;
+    --chakra-sizes-container-compact: 54.875rem;
+    --chakra-sizes-container-medium: 62.875rem;
+    --chakra-sizes-0-3: 0.3rem;
+    --chakra-sizes-4-5: 1.0666rem;
+    --chakra-sizes-4-75: 1.25rem;
+    --chakra-zIndices-hide: -1;
+    --chakra-zIndices-auto: auto;
+    --chakra-zIndices-base: 0;
+    --chakra-zIndices-docked: 10;
+    --chakra-zIndices-dropdown: 1000;
+    --chakra-zIndices-sticky: 1100;
+    --chakra-zIndices-banner: 1200;
+    --chakra-zIndices-overlay: 1300;
+    --chakra-zIndices-modal: 1400;
+    --chakra-zIndices-popover: 1500;
+    --chakra-zIndices-skipLink: 1600;
+    --chakra-zIndices-toast: 1700;
+    --chakra-zIndices-tooltip: 1800;
+    --chakra-transition-property-common: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    --chakra-transition-property-colors: background-color,border-color,color,fill,stroke;
+    --chakra-transition-property-dimensions: width,height;
+    --chakra-transition-property-position: left,right,top,bottom;
+    --chakra-transition-property-background: background-color,background-image,background-position;
+    --chakra-transition-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --chakra-transition-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --chakra-transition-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --chakra-transition-duration-ultra-fast: 50ms;
+    --chakra-transition-duration-faster: 100ms;
+    --chakra-transition-duration-fast: 150ms;
+    --chakra-transition-duration-normal: 200ms;
+    --chakra-transition-duration-slow: 300ms;
+    --chakra-transition-duration-slower: 400ms;
+    --chakra-transition-duration-ultra-slow: 500ms;
+    --chakra-blur-none: 0;
+    --chakra-blur-sm: 4px;
+    --chakra-blur-base: 8px;
+    --chakra-blur-md: 12px;
+    --chakra-blur-lg: 16px;
+    --chakra-blur-xl: 24px;
+    --chakra-blur-2xl: 40px;
+    --chakra-blur-3xl: 64px;
+}
 html{
   font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   font-feature-settings: normal;
 
 }
 body{
-  background-color: #010918;
+  background-color: #1F1C2A;
   overflow-x: hidden;
+  color: rgb(247, 248, 248);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: none;
+  overflow-x: hidde
 }
 
 .App-logo {
@@ -76,6 +606,31 @@ body{
   mix-blend-mode: soft-light;
   z-index: 2;
 }
+
+.home_2K:after {
+  content: "";
+  filter: url(#noiseFilter2);
+  inset: 0;
+  opacity: 1;
+  mix-blend-mode: soft-light;
+  z-index: 2;
+}
+.home_2K {
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://vercel.com/design/rings-bg.svg);
+  width: 100%;
+  height: 100vh;
+  max-height: 900px;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+
 .geist-visually-hidden {
   position: absolute;
   height: 1px;
@@ -98,7 +653,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("https://vercel.com/design/rings-bg.svg");
+  background-image: url("https://ucarecdn.com/18f897df-ed16-4f8c-9185-944565f9d8b0/ringsbg1.svg");
   width: 100%;
   height: 100vh;
   max-height: 900px;
@@ -264,14 +819,14 @@ svg {
     content: "";
     position: absolute;
     inset: 0px;
-    background: radial-gradient(circle at bottom center,var(--color),transparent 70%);
+   
     opacity: 0.6;
 }
 
 .fEcuEj::after {
   content: "";
   position: absolute;
-  background: rgb(0, 2, 18);
+  background: #1F1C2A;
   width: 200%;
   left: -50%;
   aspect-ratio: 1 / 0.7;
@@ -280,11 +835,6 @@ svg {
   top: 50%;
 }
 
-.ccDqTO {
-  position: relative;
-  z-index: 10;
-  background: radial-gradient(ellipse 100% 40% at 50% 60%,rgba(102,99,246,0.07), rgba(255,255,255,0));
-}
 
 .jMTAZH.parther {
   display: flex;
@@ -328,6 +878,10 @@ svg {
   letter-spacing: -0.02em;
   font-weight: 450;
 }
+
+
+  
+
 .body {
   width: 100%;
   margin: 0;
@@ -729,7 +1283,7 @@ https://idle.finance/?ref=landingfolio
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 22px 0;
+
 
   z-index: 120;
 }
@@ -1262,4 +1816,509 @@ https://idle.finance/?ref=landingfolio
 }
 .text-gradient {
   -webkit-text-fill-color: transparent;
+}
+
+
+
+
+.product-background .bg-circles {
+  height: 89.58rem;
+  position: absolute;
+  right: 0;
+  top: 6.47rem;
+  transform-origin: center right;
+  width: 70.51rem;
+  z-index: -1;
+}
+
+.product-background .bg-circles img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.product-background .bg-ellipse {
+  height: auto;
+  position: absolute;
+  right: -0.1rem;
+  top: -1.3rem;
+  width: 46.2rem;
+  z-index: -2;
+}
+
+.product-section .product-background .bg-ellipse img {
+  height: 100%;
+  width: 100%;
+}
+
+.bg-ellipse1 {
+  height: 89.47rem;
+  left: -0.1rem;
+  width: 94.12rem;
+}
+
+ .bg-ellipse1, .hero-background .bg-ellipse2 {
+  position: absolute;
+  top: -0.1rem;
+  z-index: -2;
+}
+ .bg-ellipse1 img,  .bg-ellipse2 img {
+  height: 100%;
+  width: 100%;
+}
+
+.shadow-accent-volume, .shadow-white-volume {
+  box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+}
+.shadow-accent-volume {
+  --tw-shadow: 5px 5px 10px rgba(108,106,213,.25),inset 2px 2px 6px #46bdf4,inset -5px -5px 10px #2b56f5;
+  --tw-shadow-colored: 5px 5px 10px var(--tw-shadow-color),inset 2px 2px 6px var(--tw-shadow-color),inset -5px -5px 10px var(--tw-shadow-color);
+}
+.bg-accent {
+  --tw-bg-opacity: 1;
+  background-color: #2b56f5
+}
+
+.schans-section{
+
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 35px 0px 100px 0px;
+  margin-top: 92px;
+  max-width: 1440px;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+.overlay-points{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: .4;
+    background-image: url("https://ucarecdn.com/546189a4-0cdb-4112-b32c-4e304efab562/k.png");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 55% auto;
+
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+
+  
+
+}
+
+.inner-container{
+  
+}
+.constains-image{
+  width: 92.492%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  --flex-direction: initial;
+    --flex-wrap: initial;
+    --justify-content: initial;
+    --align-items: initial;
+    --align-content: initial;
+    --gap: initial;
+    --flex-basis: initial;
+    --flex-grow: initial;
+    --flex-shrink: initial;
+    --order: initial;
+    --align-self: initial;
+    -ms-flex-preferred-size: var(--flex-basis);
+    flex-basis: var(--flex-basis);
+    -webkit-box-flex: var(--flex-grow);
+    -ms-flex-positive: var(--flex-grow);
+    flex-grow: var(--flex-grow);
+    -ms-flex-negative: var(--flex-shrink);
+    flex-shrink: var(--flex-shrink);
+    -webkit-box-ordinal-group: var(--order);
+    -ms-flex-order: var(--order);
+    order: var(--order);
+    -ms-flex-item-align: var(--align-self);
+    align-self: var(--align-self);
+}
+
+.inner-constain-image{
+  background-image: url(https://toka.b-cdn.net/wp-content/uploads/2022/04/prtlg.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin: 0px 10px 0px 0px;
+  --e-column-margin-right: 10px;
+  --e-column-margin-left: 0px;
+  padding: 20px 20px 20px 20px;
+  position: relative;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+
+
+
+
+.constains-image img {
+  height: auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+
+.background-linear{
+
+}
+
+.bg-ellipse1 img{
+  opacity: .3;
+}
+
+
+
+.bUOtFf.bUOtFf {
+  margin: -128px auto;
+}
+
+.jfPhrT {
+  color: #fff;
+  text-align: center;
+  font-size: 55px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 450;
+}
+
+.byhRHm {
+  max-width: 680px;
+}
+
+.dnoTOq {
+  color: rgb(180, 188, 208);
+  
+  margin: 0px auto 48px;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+
+.css-1grylpu {
+  margin-bottom: var(--chakra-space-6);
+  border: 0.09375rem solid;
+  border-color: var(--chakra-colors-StaticDividerWeak);
+  border-radius: var(--chakra-radii-2xl);
+  box-shadow: 0px 4px 32px 0px #0000000D;
+  -webkit-backdrop-filter: var(--chakra-backdrop-blur) var(--chakra-backdrop-brightness) var(--chakra-backdrop-contrast) var(--chakra-backdrop-grayscale) var(--chakra-backdrop-hue-rotate) var(--chakra-backdrop-invert) var(--chakra-backdrop-opacity) var(--chakra-backdrop-saturate) var(--chakra-backdrop-sepia);
+  backdrop-filter: var(--chakra-backdrop-blur) var(--chakra-backdrop-brightness) var(--chakra-backdrop-contrast) var(--chakra-backdrop-grayscale) var(--chakra-backdrop-hue-rotate) var(--chakra-backdrop-invert) var(--chakra-backdrop-opacity) var(--chakra-backdrop-saturate) var(--chakra-backdrop-sepia);
+  --chakra-backdrop-blur: blur(32px);
+  --chakra-backdrop-brightness: var(--chakra-empty,/*!*/ /*!*/);
+  --chakra-backdrop-contrast: var(--chakra-empty,/*!*/ /*!*/);
+  --chakra-backdrop-grayscale: var(--chakra-empty,/*!*/ /*!*/);
+  --chakra-backdrop-hue-rotate: var(--chakra-empty,/*!*/ /*!*/);
+  --chakra-backdrop-invert: var(--chakra-empty,/*!*/ /*!*/);
+  --chakra-backdrop-opacity: var(--chakra-empty,/*!*/ /*!*/);
+  --chakra-backdrop-saturate: var(--chakra-empty,/*!*/ /*!*/);
+  --chakra-backdrop-sepia: var(--chakra-empty,/*!*/ /*!*/);
+  background: var(--chakra-colors-StaticSurfaceDefault);
+  height: auto;
+  overflow: hidden;
+}
+
+.css-1khquhc {
+  padding: 0.09375rem;
+  background: linear-gradient(180deg, #2b57f57a 15.71%, rgba(170, 63, 255, 0) 55.32%);
+  border-radius: var(--chakra-radii-xl);
+}
+.css-kg5ry4 {
+  -webkit-padding-start: var(--chakra-space-6);
+  padding-inline-start: var(--chakra-space-6);
+  -webkit-padding-end: var(--chakra-space-6);
+  padding-inline-end: var(--chakra-space-6);
+  padding-top: var(--chakra-space-2);
+  padding-bottom:  33px;
+}
+.css-nr1hta {
+  text-align: inherit;
+  margin-top: var(--chakra-space-2);
+}
+.css-nr1hta {
+  text-transform: uppercase;
+  font-family: var(--chakra-fonts-body);
+  font-weight: var(--chakra-fontWeights-semibold);
+  line-height: var(--chakra-lineHeights-short);
+  letter-spacing: var(--chakra-letterSpacings-kicker);
+  font-size: var(--chakra-fontSizes-2xs);
+  text-align: center;
+  display: inline-block;
+  background: var(--chakra-colors-GradientMain);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: var(--chakra-space-2);
+  margin-bottom: var(--chakra-space-2);
+}
+.css-1th6kja {
+  font-size: var(--chakra-fontSizes-18);
+  font-family: var(--chakra-fonts-heading);
+  font-weight: var(--chakra-fontWeights-light);
+  letter-spacing: var(--chakra-letterSpacings-wide);
+  line-height: var(--chakra-lineHeights-medium);
+}
+.css-xiqael {
+  font-size: 15px;
+  font-family: var(--chakra-fonts-heading);
+  font-weight: var(--chakra-fontWeights-light);
+  letter-spacing: var(--chakra-letterSpacings-wide);
+  line-height: var(--chakra-lineHeights-medium);
+  padding-right: var(--chakra-space-12);
+  color: var(--chakra-colors-StaticContentWeak);
+  padding: 0;
+}
+.css-gg0frf {
+  height: 271px;
+}
+
+.filter-css{
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 16px;
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  height: 200px;
+  height: 200px;
+  width: 200px;
+  left: 50%;
+  z-index: 999;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.hCAyNo {
+  isolation: isolate;
+  overflow: hidden;
+  padding: 56px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  flex: 1 1 0%;
+  --radius: 48px;
+  --rgb: 70,189,244;
+  border-radius: var(--radius);
+  --transparent: rgba(255,255,255,0);
+  position: relative;
+  perspective: 20000px;
+  aspect-ratio: 1.1 / 1;
+  background: radial-gradient(ellipse at center,rgba(var(--rgb),0.15),var(--transparent));
+  border: 1px solid #718096
+}
+
+.hCAyNo::before {
+    content: "";
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    -webkit-mask: linear-gradient(black, black) content-box content-box, linear-gradient(black, black);
+    -webkit-mask-composite: xor;
+}
+
+.FKXcj {
+  color: currentcolor;
+  margin: 0px 0px 8px;
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  font-weight: 450;
+}
+.hCAyNo .sc-b86529e4-3 {
+  max-width: 310px;
+}
+
+
+.fnRhCl {
+  color: rgb(180, 188, 208);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 450;
+  margin: 0px;
+}
+
+.bg-ellipse3 {
+  position: absolute;
+  top: 51.9rem;
+  z-index: -2;
+
+  height: 89.47rem;
+  right: -0.1rem;
+
+  width: 94.12rem;
+}
+
+
+.bg-ellipse3 img {
+  height: 100%;
+  width: 100%;
+}
+.hCAyNo.{
+  background: linear-gradient(180deg, #2b57f57a 15.71%, rgba(170, 63, 255, 0) 55.32%);
+  border-radius: var(--chakra-radii-xl);
+}
+
+.card-cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  height: 160px;
+  top: -20%;
+  left: 0;
+  will-change: top;
+  background-size: cover;
+  background-position: center;
+  filter: blur(30px);
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.card-avatar {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  object-position: center;
+  object-fit: cover;
+  margin: 0 auto; 
+  z-index: 99;
+  position: relative;
+
+}
+
+.bg-circles-team {
+  height: 13.25rem;
+  position: absolute;
+  right: 0.6rem;
+  top: 8.64rem;
+  transform-origin: center;
+  width: 98.25rem;
+  z-index: -1;
+}
+
+ .bg-ellipse-team{
+  height: 81.32rem;
+  position: absolute;
+  right: 0;
+  top: -0.3rem;
+  width: 91.4rem;
+  z-index: -2;
+  opacity: .5;
+}
+.bg-ellipse-team img{
+  width:100%;
+  height: 100%;
+}
+
+.kxZXVK.kxZXVK {
+  margin: -64px auto;
+}
+
+.drPVqm {
+  --color: #4e5cda;
+  pointer-events: none;
+  user-select: none;
+  position: relative;
+  width: min(var(--page-max-width),100%);
+  margin: 0px auto;
+  height: 481px;
+  overflow: hidden;
+  -webkit-mask-image: radial-gradient(circle at center center, black, transparent 80%);
+}
+
+.drPVqm::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+
+  opacity: 0.4;
+}
+.eKUsdk {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-mask-image: radial-gradient(circle at center bottom, black, transparent);
+}
+
+.drPVqm::after {
+  content: "";
+  position: absolute;
+
+  width: 200%;
+  left: -50%;
+  aspect-ratio: 1 / 0.7;
+  border-radius: 50%;
+  border-top: 1px solid rgb(38 36 204 / 77%);
+  top: 50%;
+}
+.EcosystemCallouts_tile__4XBee {
+  border-bottom-width: 1px;
+}
+.dark\:border-dark-ui-primary {
+  --tw-border-opacity: 1;
+  border-color: rgb(53 53 66/var(--tw-border-opacity));
+}
+
+@media (min-width: 640px) {
+  .EcosystemCallouts_tile__4XBee:nth-child(even) {
+    border-left: 1px solid red;
+    --tw-border-opacity: 1;
+    border-color: rgb(53 53 66/var(--tw-border-opacity));
+  }
+
+  .EcosystemCallouts_tile__4XBee:nth-last-child(2) {
+    border-top: 1px solid red;
+    --tw-border-opacity: 1;
+    border-color: rgb(53 53 66/var(--tw-border-opacity));
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .EcosystemCallouts_tile__4XBee:nth-child(even) {
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .EcosystemCallouts_tile__4XBee:nth-child(3n + 2) {
+    border-left: 1px solid;
+    border-right: 1px solid;
+    --tw-border-opacity: 1;
+    border-color: rgb(53 53 66/var(--tw-border-opacity));
+  }
+
+  .EcosystemCallouts_tile__4XBe:nth-last-child(2),
+  .EcosystemCallouts_tile__4XBe:nth-last-child(3) {
+    border-bottom: none;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .jfPhrT {
+    font-size: 44px;
+  }
 }

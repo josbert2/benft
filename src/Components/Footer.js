@@ -15,49 +15,11 @@ function Footer() {
     
   return (
     <>
-        <section class="technical">
-            <div class="container mx-auto">
-                <div class="section-header-badge" >BeNFT</div>
-                <h2 class="section-header-title text-center">
-                    <div class="section-header-title-desktop pb-20">
-                        <span >POWERED BY A TEAM</span>
-                    </div>
-                </h2>
-
-                <div class="magical-borders-content grid grid-cols-4 gap-20">
-                    {simulatedArray.map((item, index) => (
-                        <div class="technical-excel pt-20">
-                            <div class="technical-excel-inner magical-borders-inner" style={styles}>
-                                <img src="https://wope.com/images/technical/technical-excel-lights.png" class="h-full" />
-                                <div class="absolute top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4">
-                                    <div class="card-animation-opportunity rounded-full ">
-                                        <img class="w-30 mx-auto" style={{ width: "175px" }}  src="https://main.d21mzqunbsoo09.amplifyapp.com/images/Team/gg.png" />
-                                    </div>
-                                    <div class="pt-4">
-                                        <div class="footer-nav-group-item text-center font-bold text-base">
-                                            Carlos Melendez
-                                        </div>
-                                        <div class="footer-nav-group-item text-center">
-                                            Legal and Compliance
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="technical-excel-text">
-
-                                </div>
-                            </div>
-                        </div>    
-                    ))}
-                    
-                </div>
-            </div>
-
-        </section>
         <footer class="bg-black footer">
             <div class="relative overflow-hidden jMTAZH" >
                
-                <div class="py-20 px-40 ">
-                    <div class="grid grid-cols-4 gap-20">
+                <div class="md:py-20 md:px-40 px-10 py-10">
+                    <div class="md:grid md:grid-cols-4 gap-20">
                         <div class="">
                             <div class="w-[220px]">
                                 <img class="w-full h-full" src={logo} />
@@ -67,8 +29,8 @@ function Footer() {
                                 Overall, BeNFT is the perfect solution for anyone looking to take their digital investments.
                             </div>
                         </div>
-                        <div class="flex justify-evenly w-full col-span-3">
-                            <div class="">
+                        <div class="flex md:flex-row flex-col justify-evenly w-full col-span-3">
+                            <div class="md:mb-0 mb-10">
                                 <h2 class="text-[#d0d6e0] text-[14] font-medium tracking-wider mb-4">About</h2>
                                 <div className="footer-nav-group" >
                                 
@@ -100,7 +62,7 @@ function Footer() {
                                     </ul>
                                 </div>
                             </div>
-                            <div class="">
+                            <div class="md:mb-0 mb-10">
                                 <h2 class="text-[#d0d6e0] text-[14] font-medium tracking-wider mb-4">Support</h2>
                                 <div className="footer-nav-group" >
                                 
@@ -119,7 +81,7 @@ function Footer() {
                                     </ul>
                                 </div>
                             </div>
-                            <div class="">
+                            <div class="md:mb-0 mb-10">
                                 <h2 class="text-[#d0d6e0] text-[14] font-medium tracking-wider mb-4">Protocol</h2>
                                 <div className="footer-nav-group" >
                                 
@@ -151,11 +113,11 @@ function Footer() {
                                     </ul>
                                 </div>
                             </div>
-                            <div class="">
+                            <div class="md:mb-0 mb-10">
                                 <h2 class="text-[#d0d6e0] text-[14] font-medium tracking-wider mb-4">Comunity</h2>
                                 <div className="footer-nav-group" >
                                 
-                                    <ul>
+                                    <ul class="md:block md:flex-col flex-row flex justify-between">
                                         <li class="">
                                             <a href="#" aria-label="Features" className="footer-nav-group-item">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook w-6 h-6" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">

@@ -11,7 +11,8 @@ function Layout(props) {
       <Header />
         <Noise />
         {props.children}
-      <Footer />
+        <Footer />
+       {/*  */}
     </div>
   );
 }
