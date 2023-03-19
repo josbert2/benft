@@ -3,7 +3,7 @@ import React from 'react'
 function Partners() {
     return (
         <section class="md:pb-40 px-10 pb-10 md:px-40">
-            <div class="col-span-5 my-10 md:my-40">
+            <div class="col-span-5 my-10 md:my-10">
                 <h2 class="jfPhrT text-white">Partners</h2>
             </div>
             <div className="md:grid md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

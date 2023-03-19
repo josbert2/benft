@@ -2434,3 +2434,287 @@ https://idle.finance/?ref=landingfolio
   color: #d9d9d9;
     font-weight: 700;
 }
+
+.frame-container-team{
+  place-self: start;
+  flex: 0 0 auto;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.framer-item-team{
+  display: contents;
+  pointer-events: auto
+}
+
+.framer-inter-inner{
+  --border-bottom-width: 2px;
+  --border-color: rgba(255, 255, 255, 0.04);
+  --border-left-width: 2px;
+  --border-right-width: 2px;
+  --border-style: solid;
+  --border-top-width: 2px;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  opacity: 1;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 1.33865px 1.33865px -0.46875px, rgba(0, 0, 0, 0.027) 0px 3.18737px 3.18737px -0.9375px, rgba(0, 0, 0, 0.027) 0px 5.80746px 5.80746px -1.40625px, rgba(0, 0, 0, 0.027) 0px 9.65471px 9.65471px -1.875px, rgba(0, 0, 0, 0.027) 0px 15.6004px 15.6004px -2.34375px, rgba(0, 0, 0, 0.024) 0px 25.5211px 25.5211px -2.8125px, rgba(0, 0, 0, 0.02) 0px 43.9683px 43.9683px -3.28125px, rgba(0, 0, 0, 0.01) 0px 80px 80px -3.75px, rgba(255, 255, 255, 0.145) 0px 0.48258px 0.48258px -1.25px inset, rgba(255, 255, 255, 0.125) 0px 1.83217px 1.83217px -2.5px inset, rgba(255, 255, 255, 0.05) 0px 8px 8px -3.75px inset;
+  height: 100%;
+  place-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0px;
+  height: min-content;
+  overflow: hidden;
+  padding: 0px;
+  position: relative;
+  text-decoration: none;
+  width: 500px;
+  will-change: transform;
+}
+
+.framer-inter-inner::after {
+  content: "";
+  border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0);
+  /* border-color: var(--border-color, none); */
+  /* border-style: var(--border-style, none); */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  left: 0px;
+  top: 0px;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.overlay-item{
+  filter: none;
+  opacity: 0.6;
+  border-radius: 24px;
+  transform: none;
+  transform-origin: 50% 50% 0px;
+  inset: 0px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  will-change: transform;
+}
+.overlay-item-inner{
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  border-radius: inherit;
+  inset: 0px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+}
+
+.overlay-item-inner-content
+{
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  border-radius: inherit;
+  inset: 0px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+}
+
+.overlay-image{
+  pointer-events: none;
+  user-select: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-position: center center;
+  object-fit: cover;
+  image-rendering: auto;
+}
+
+
+.frame-container-team{
+  height: 500px;
+  width: 100%;
+  border: 4px solid rgba(255, 255, 255, 0.04);
+  border-radius: 24px;
+  background: #ff00000d;
+  background: hsla(210, 90%, 80%, 1);
+  background: radial-gradient(circle, hsla(210, 90%, 80%, 1) 0%, hsla(212, 93%, 49%, 1) 100%);
+  background: -moz-radial-gradient(circle, hsla(210, 90%, 80%, 1) 0%, hsla(212, 93%, 49%, 1) 100%);
+  background: -webkit-radial-gradient(circle, hsl(210deg 90% 80% / 28%) 0%, hsl(212deg 93% 49% / 0%) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9FCCFA", endColorstr="#0974F1", GradientType=1 );
+}
+
+.framer-165zonw-container{
+  inset: 0px;
+  flex: 0 0 auto;
+  pointer-events: none;
+  position: absolute;
+}
+
+.framer-1q1ot83{
+  --framer-aspect-ratio-supported: auto;
+  aspect-ratio: 1.25654 / 1;
+  bottom: 0px;
+  flex: 0 0 auto;
+  height: var(--framer-aspect-ratio-supported, 398px);
+  mix-blend-mode: luminosity;
+  overflow: visible;
+  pointer-events: none;
+  position: absolute;
+  right: 0px;
+  width: 100%;
+  z-index: 1;
+}
+.framer-tg4xkj {
+  place-content: center space-between;
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: row nowrap;
+  height: min-content;
+  overflow: visible;
+  padding: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.framer-1ikghrp{
+  bottom: 180px;
+  flex: 0 0 auto;
+  height: 200px;
+  left: 0px;
+  overflow: visible;
+  pointer-events: none;
+  position: absolute;
+  right: 0px;
+}
+
+.framer-text {
+  --framer-text-color: var(--extracted-a0htzi);
+  --framer-font-family: "Neue Plak Extended Bold", serif;
+  --framer-font-size: 200px;
+  --framer-font-style: normal;
+  --framer-font-weight: 400;
+  --framer-letter-spacing: -4px;
+  --framer-line-height: 100%;
+  --framer-paragraph-spacing: 0px;
+  --framer-text-alignment: start;
+  --framer-text-color: var(--token-c7386cc7-0c90-4ec7-91d7-974da3391509, #ffffff);
+  --framer-text-decoration: none;
+  --framer-text-transform: none;
+  -webkit-text-stroke: 1px #fff;
+  -webkit-font-smoothing: antialiased;
+  color: transparent!important;
+
+  font-style: var(--framer-font-style, normal);
+  font-weight: var(--framer-font-weight, 400);
+  color: var(--framer-text-color, #000);
+  font-size: var(--framer-font-size, 16px);
+  letter-spacing: var(--framer-letter-spacing, 0);
+  text-transform: var(--framer-text-transform, none);
+  text-decoration: var(--framer-text-decoration, none);
+  line-height: var(--framer-line-height, 1.2em);
+  text-align: var(--framer-text-alignment, start);
+}
+
+.framer-4v5yo1
+{
+  filter: none;
+ 
+  border-radius: 24px;
+  transform: none;
+  transform-origin: 50% 50% 0px;
+  inset: 0px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  will-change: transform;
+
+}
+
+.framer-1q1ot83 img{
+  border-radius: 26px !important;
+}
+
+.framer-r28pq1 {
+  flex: 0 0 auto;
+  height: auto;
+  position: relative;
+  white-space: pre-wrap;
+  width: 100%;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.frame-container-team{
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.frame-container-team:hover{
+  background: #ff00000d;
+  background: hsla(210, 90%, 80%, 1);
+  background: radial-gradient(circle, hsla(210, 90%, 80%, 1) 0%, hsla(212, 93%, 49%, 1) 100%);
+  background: -moz-radial-gradient(circle, hsla(210, 90%, 80%, 1) 0%, hsla(212, 93%, 49%, 1) 100%);
+  background: -webkit-radial-gradient(circle, hsl(210deg 90% 80% / 28%) 0%, hsl(212deg 93% 49% / 0%) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9FCCFA", endColorstr="#0974F1", GradientType=1 );
+  cursor: pointer;
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.frame-container-team:hover .framer-4v5yo1{
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.frame-container-team:hover .framer-4v5yo1{
+  transform: scale(2);
+
+}
+
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.modal.open {
+  display: block;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+}

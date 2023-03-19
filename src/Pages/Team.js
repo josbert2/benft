@@ -77,17 +77,35 @@ function Team() {
     const simulatedArray = Array.from({ length }, (_, index) => index);
 
     const image = [
-      'https://main.d21mzqunbsoo09.amplifyapp.com/images/Team/mitch.png',
-      'https://main.d21mzqunbsoo09.amplifyapp.com/images/Team/gg.png',
-      'https://main.d21mzqunbsoo09.amplifyapp.com/images/Team/teo.png',
-      'https://main.d21mzqunbsoo09.amplifyapp.com/images/Team/borbon.jpg',
-      'https://main.d21mzqunbsoo09.amplifyapp.com/images/Team/carlos.png',
-      'https://main.d21mzqunbsoo09.amplifyapp.com/images/Team/miranda.jpg',
-      'https://main.d21mzqunbsoo09.amplifyapp.com/images/Team/carlos.png',
-      'https://main.d21mzqunbsoo09.amplifyapp.com/images/Team/miranda.jpg',
-      'https://main.d21mzqunbsoo09.amplifyapp.com/images/Team/borbon.jpg',
-      'https://main.d21mzqunbsoo09.amplifyapp.com/images/Team/teo.png',
+      'https://ucarecdn.com/4542fd8f-5e2a-4d12-9046-2873a1499b9f/Image3greyscaleremovebgpreview.png',
+      'https://ucarecdn.com/4542fd8f-5e2a-4d12-9046-2873a1499b9f/Image3greyscaleremovebgpreview.png',
+      'https://ucarecdn.com/4542fd8f-5e2a-4d12-9046-2873a1499b9f/Image3greyscaleremovebgpreview.png',
+      'https://ucarecdn.com/4542fd8f-5e2a-4d12-9046-2873a1499b9f/Image3greyscaleremovebgpreview.png',
+      'https://ucarecdn.com/4542fd8f-5e2a-4d12-9046-2873a1499b9f/Image3greyscaleremovebgpreview.png',
+      'https://ucarecdn.com/4542fd8f-5e2a-4d12-9046-2873a1499b9f/Image3greyscaleremovebgpreview.png',
+      'https://ucarecdn.com/4542fd8f-5e2a-4d12-9046-2873a1499b9f/Image3greyscaleremovebgpreview.png',
+      'https://ucarecdn.com/4542fd8f-5e2a-4d12-9046-2873a1499b9f/Image3greyscaleremovebgpreview.png',
+      'https://ucarecdn.com/4542fd8f-5e2a-4d12-9046-2873a1499b9f/Image3greyscaleremovebgpreview.png',
+      'https://ucarecdn.com/4542fd8f-5e2a-4d12-9046-2873a1499b9f/Image3greyscaleremovebgpreview.png',
     ]
+
+
+    const imageOverlay = [
+      'https://framerusercontent.com/images/0bxiqfdPNMkzhuD6SPoyLU0JkQ.png',
+      'https://framerusercontent.com/images/y4Z1dBLf5aNz5yZLC9w8vOkwo.png?scale-down-to=512',
+      'https://framerusercontent.com/images/DRYyjEQyd7FJ7a5pl6B4WLi2ZQ.png?scale-down-to=512',
+      'https://framerusercontent.com/images/YZwE7j4xxjzl0Bf9E5DaFTXw.png?scale-down-to=512',
+      'https://framerusercontent.com/images/0bxiqfdPNMkzhuD6SPoyLU0JkQ.png',
+      'https://framerusercontent.com/images/y4Z1dBLf5aNz5yZLC9w8vOkwo.png?scale-down-to=512',
+      'https://framerusercontent.com/images/y4Z1dBLf5aNz5yZLC9w8vOkwo.png?scale-down-to=512',
+      'https://framerusercontent.com/images/DRYyjEQyd7FJ7a5pl6B4WLi2ZQ.png?scale-down-to=512',
+      'https://framerusercontent.com/images/YZwE7j4xxjzl0Bf9E5DaFTXw.png?scale-down-to=512',
+      'https://framerusercontent.com/images/y4Z1dBLf5aNz5yZLC9w8vOkwo.png?scale-down-to=512',
+
+    ]
+
+
+
 
     const name = [
       'Mitchell',
@@ -120,6 +138,7 @@ function Team() {
 
 
 
+         
 
 
 
@@ -134,8 +153,7 @@ function Team() {
 
 
 
-            
-            <div className="security-background">
+            {/*<div className="security-background">
               <div className="bg-circles-team">
                 <picture>
                   <source data-srcset="https://idle.finance/assets/img/bgCircles-tablet3.54707b.svg" media="(max-width: 1024px)" srcSet="https://idle.finance/assets/img/bgCircles-tablet3.54707b.svg" />
@@ -146,28 +164,55 @@ function Team() {
               <div className="bg-ellipse-team">
                 <img data-src="https://idle.finance/assets/img/Ellipse4.b4c1ed.png" className="lazy lazyLoaded" data-load-priority={5} alt="" src="https://idle.finance/assets/img/Ellipse4.b4c1ed.png" />
               </div>
-            </div>
+            </div> */}
             <div class="my-20">
               <div class="section-header-badge">BeNFT</div>
               <h2 class="section-header-title text-center"><div class="section-header-title-desktop pb-20"><span>POWERED BY A TEAM</span></div></h2>
             </div>    
-            <div class="md:grid md:grid-cols-4 gap-20 md:py-40 md:px-40 px-10">
+            <div class="container px-10 grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto">
               {simulatedArray.map((item, index) => (
-                <div className="mb-10 sc-b86529e4-7 hCAyNo">
-                  <div>
-                  <div className="card-cover" style={{ backgroundImage: `url(${image[index]})` }} />
-                    <div class=" flex w-full justify-center">
-                    <img className="card-avatar" src={image[index]} alt="avatar" />
+                <div class="frame-container-team w-full">
+                  <div class="framer-item-team relative">
+                    <div class="framer-4v5yo1">
+                      <div class="absolute h-full">
+                        <div class="con contents">
+                          <div class="h-full">
+                            <img class="block w-full h-full object-cover bg-center" src={imageOverlay[index]} alt="" 
+                            style={{pointerEvents: 'none', userSelect: 'none', display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center center', objectFit: 'cover', imageRendering: 'auto'}} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="framer-165zonw-container">
+                      <div class="w-full h-full rounded-3xl relative overflow-hidden">
+                        <div class="absolute inset-0">
+                        <div style={{width: '100%', height: '100%', backgroundSize: '128px', backgroundRepeat: 'repeat', backgroundImage: 'url("https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png")', opacity: '0.04', borderRadius: '24px'}} />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="framer-1q1ot83">
+                      <div class="absolute right-0 bottom-0">
+                        <div class=" w-96 h-96"> 
+                          <img src={image[index]} alt="" srcSet="https://ucarecdn.com/4542fd8f-5e2a-4d12-9046-2873a1499b9f/Image3greyscaleremovebgpreview.png 1004w" style={{pointerEvents: 'none', userSelect: 'none', display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center center', objectFit: 'cover', imageRendering: 'auto'}} />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="framer-tg4xkj">
+                      <div class="flex-1 h-auto relative w-auto">
+                          <h3 class="text-xl font-light">{name[index]} - <span class="font-extrabold ">{ pro[index] }</span></h3>
+                          
+                      </div>
+                    </div>
+                    <div class="framer-1ikghrp ">
+                        <div class="flex  pt-[60px] justify-start flex-col opacity-5  h-auto left-7 absolute top-2/4 w-auto">
+                          <h3 class="framer-text">{name[index]}</h3>
+                        </div>
                     </div>
                   </div>
-                  <div class="flex items-center flex-col pt-5">
-                    <h3 className="sc-74479697-0 sc-b86529e4-2 FKXcj">{name[index]}</h3>
-                      <p className="sc-74479697-0 sc-b86529e4-3 fnRhCl">{ pro[index] }</p>
-                  </div>
-                
-                </div>
+                </div> 
               ))}
             </div>
+           
             <div style={{transform: 'rotate(180deg)'}} className="sc-b86529e4-11 sc-6354984e-1 drPVqm kxZXVK">
               <svg xmlns="http://www.w3.org/2000/svg" width={872} height={731} fill="none" className="sc-bf8b3d70-0 eKUsdk">
                 <g fill="#fff" opacity="0.7">

@@ -1,9 +1,22 @@
 import {React, useState} from 'react';
 
+
+import Modal from './Modal';
+
+
 function Home2() {
    const styles = {
       "--animation-speed": "4s",
     };
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+   const handleOpenModal = () => {
+      setModalIsOpen(true);
+   }
+
+   const handleCloseModal = () => {
+      setModalIsOpen(false);
+   }
 
    
   return (
@@ -70,7 +83,7 @@ function Home2() {
          </div>
 
 
-         <div class="flex justify-center absolute -bottom-5 left-2/4 -translate-x-2/4 ">
+         <div class="flex justify-center absolute -bottom-5 left-2/4 -translate-x-2/4 z-[99999]">
               <div class="glowing-box glowing-box-active" style={styles}>
                 <div class="glowing-box-animations">
                   <div class="glowing-box-glow"></div>
